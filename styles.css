@@ -6,7 +6,7 @@ body {
     font-family: sans-serif;
     font-size: 40px;
     width: 100%;
-    min-height: 100vh;
+    
   }
 
 
@@ -21,7 +21,7 @@ body {
     grid-template-rows: repeat(16, 1fr);
 }
 
-[class^="C"] {
+.blank {
     background-color: rgb(238, 216, 157);
     display: grid;
     place-items: center;
@@ -29,6 +29,6 @@ body {
     height: 5vh;
 }
 
-[class^="C"]:hover {
+.draw {
     background-color: tomato;
 }
