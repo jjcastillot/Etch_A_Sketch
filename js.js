@@ -1,5 +1,10 @@
 const container = document.querySelector('.container');
-let gridSize = prompt('Please introduce the grid size!');
+gridSize = 0;
+do {
+    gridSize = prompt('Please introduce the grid size (Between 1-100)!');
+} while ((Number(gridSize)<1) || (Number(gridSize)>100));
+
+
 container.style['grid-template-columns'] = `repeat(${gridSize}, 1fr)`;
 container.style['grid-template-rows'] = `repeat(${gridSize}, 1fr)`;
 
