@@ -13,20 +13,19 @@ body {
 
 .container {
     display: grid;
-    gap: 2px;
-    height: 80vh;
-    width: 80vh;
-
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    gap: 1px;
+    height: 90vh;
+    width: 90vh;
+    /*grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);*/
 }
 
 .blank {
     background-color: rgb(238, 216, 157);
     display: grid;
     place-items: center;
-    width: 5vh;
-    height: 5vh;
+    /*width: 5vh;
+    height: 5vh;*/
 }
 
 .draw {
