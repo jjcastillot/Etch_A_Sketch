@@ -9,6 +9,7 @@ createGridBtn.addEventListener('click', function(e) {
         gridSize = prompt('Please introduce the grid size (Between 1-100)!');
     } while ((Number(gridSize)<1) || (Number(gridSize)>100));
     
+    container.innerHTML = ''; //Removes the previous grid
     createGrid(container,gridSize);  
     function drawing(e) {
         //e.target.classList.add('draw');  
