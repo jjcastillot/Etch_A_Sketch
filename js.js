@@ -1,6 +1,8 @@
+//Start constants and vars
 const container = document.querySelector('.container');
-gridSize = 0;
+let gridSize = 0;
 
+//Add event listener to button to create grid and start drawing
 const createGridBtn = document.querySelector('.create_grid');
 createGridBtn.addEventListener('click', function(e) {
     do {
@@ -9,12 +11,16 @@ createGridBtn.addEventListener('click', function(e) {
     
     createGrid(container,gridSize);  
     function drawing(e) {
-        e.target.classList.add('draw');   
+        //e.target.classList.add('draw');  
+        e.target.style['background-color'] = `rgb(${random(255)},${random(255)},
+        ${random(255)})`;  
     }
     const sketch = Array.from(document.querySelectorAll('.blank'));
     sketch.forEach(square => square.addEventListener('mouseover', drawing));
 });
 
+
+// Generates the grid according to gridSize
 function createGrid(container,gridSize) {
     container.style['grid-template-columns'] = `repeat(${gridSize}, 1fr)`;
     container.style['grid-template-rows'] = `repeat(${gridSize}, 1fr)`;
@@ -25,3 +31,8 @@ function createGrid(container,gridSize) {
         container.appendChild(content);      
     }
 }
+
+//Random function to create the random color
+function random(number) {
+    return Math.floor(Math.random()*number);
+    }

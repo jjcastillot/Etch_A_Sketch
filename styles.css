@@ -3,25 +3,38 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
     width: 100%;
-    
-  }
+}
 
+.header {
+    display: flex;
+    justify-content: left;
+}
+
+p {
+    margin: 10px;
+    padding: 10px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+}
 
 
 .container {
     display: grid;
     gap: 1px;
-    height: 90vh;
-    width: 90vh;
+    height: 80vh;
+    width: 80vh;
     /*grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);*/
 }
 
 .blank {
-    background-color: rgb(238, 216, 157);
+    background-color: rgb(243, 243, 243);
     display: grid;
     place-items: center;
     /*width: 5vh;
